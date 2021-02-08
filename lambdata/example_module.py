@@ -1,0 +1,1 @@
+FAVORITE_ANIMALS = ['Tree Frog','Pangolin']
