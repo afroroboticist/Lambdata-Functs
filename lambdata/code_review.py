@@ -1,11 +1,9 @@
 import pandas as pd
 import numpy as np
 from numpy.random import default_rng
-import sklearn
 
 
 class MyDataFrame(pd.DataFrame):
-    
     def null_count(self):
         return self.isna().sum().sum()
 
@@ -40,7 +38,6 @@ class MyDataFrame(pd.DataFrame):
         return new_df
 
 
-
 if __name__ == "__main__":
     ODI_runs = {'name': ['Tendulkar', 'Sangakkara', 'Ponting',
                          'Jayasurya', 'Jayawardene', 'Kohli',
@@ -48,7 +45,5 @@ if __name__ == "__main__":
                 'runs': [18426, 14234, 13704, 13430, 12650,
                          11867, 11739, 11579, 11363, 10889]}
     my_df = MyDataFrame(ODI_runs)
-    print(type(my_df))
-
     train_test = my_df.train_test_split(0.8)
     print(train_test)
